@@ -1,0 +1,68 @@
+@import 'abrusco';
+@import '-copy';
+
+/* header */
+
+#menu-invoke {
+  position: absolute;
+  left: -9999px;
+  &:checked + * #menu {
+    display: block;
+  }
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero__bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+/* responsivity */
+
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 22rem;
+}
+
+@media (--view-sd) {
+
+  .wrap {
+    max-width: 24rem;
+  }
+
+}
+
+@media (--view-md) {
+
+  .wrap {
+    max-width: 46rem;
+  }
+
+}
+
+@media (--view-ld) {
+
+  .wrap {
+    max-width: 80rem;
+  }
+
+}
+
+@custom-media --view-sd (min-width: 24rem);
+@custom-media --view-md (min-width: 41rem);
+@custom-media --view-ld (min-width: 80rem);
+@custom-media --view-xl (min-width: 90rem);

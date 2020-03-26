@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{{ page.title }} &ndash; {{ site.title }}{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="{{ kirby.url }}/static/master.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/brands.css">
+</head>
+<body>
+
+  <input type="checkbox" id="menu-invoke" autocomplete="off">
+
+  <header class="hero bg-black-90 color-white">
+    <div class="hero__bg"></div>
+    <div class="hero__content col max80 mx">
+
+      <div>
+        <aside class="sd-px1">
+          <div class="py05">
+            <nav class="px05 self-center md-row justify-between nowrap">
+              {% if site.social.notEmpty %}
+              <ul class="lh4 row justify-center">
+                {% for item in site.social.toStructure %}
+                <li><a
+                  class="block p05"
+                  title="{{ item.name }}"
+                  href="{{ item.url }}"
+                ><span class="fab inline-block py025" aria-hidden="true">&#x{{ item.code }};</span><span class="hide">{{ item.name }}</span></a></li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+              <ul class="lh4 row justify-center">
+                <li><a class="block p05 ul:hover" href="#">link 1</a></li>
+                <li><a class="block p05 ul:hover" href="#">link 2</a></li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
+        <hr class="px1 sd-px2 div o20">
+        <div class="py1 sd-p1 sd-row ld-row justify-between flex-wrap">
+          <div class="order0 row justify-between span1 span-auto">
+            <figure><a class="block p1 fw800" href="{{ page('home').url }}">
+              {{- site.title -}}
+            </a></figure>
+            <div class="ld-hide">
+              <label for="menu-invoke" class="block p1 cursor-pointer">menu</label>
+            </div>
+          </div>
+          <hr class="order1 w100 ld-hide">
+          <nav id="menu" class="order1 span1 span-auto hide ld-show">
+            <ul class="ld-row justify-end ac">
+              {% for _page in site.pages.listed %}
+              <li><a
+                class="block p1 ul{% if _page != page %}:hover{% endif %}"
+                href="{{ _page.url }}"
+              >{{ _page.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="wrap py1 md-py2">
+    <div class="py1 md-py2">
+      <div class="py1 sd-p1 md-grid2 ld-grid4">
+        {% for i in 1..4 %}
+        <article class="p075">
+          <figure class="p025">
+            <svg class="block bg-black-10" viewBox="0 0 4 3"></svg>
+          </figure>
+          <div class="p025">
+            <h1 class="h5 lh3 fw700">Hello World!</h1>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="py1 md-py2">
+      <div class="py1 sd-p1 ld-grid3">
+        {% for i in 1..3 %}
+        <article class="p075">
+          <figure class="p025">
+            <svg class="block bg-black-10" viewBox="0 0 8 5"></svg>
+          </figure>
+          <div class="p025">
+            <h1 class="h5 lh3 fw700">Hello World!</h1>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+
+  {% if site.footer.notEmpty %}
+  <footer class="bg-black-90 color-white">
+    <div class="wrap py2">
+      <div class="py1 sd-p1">
+
+        <div class="p1 copy ac">
+          {{ site.footer | kt }}
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  {% endif %}
+
+</body>
+</html>
