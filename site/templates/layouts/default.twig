@@ -11,7 +11,7 @@
 
   <input type="checkbox" id="menu-invoke" autocomplete="off">
 
-  <header class="hero bg-black-90 color-white">
+  <header class="hero">
     <div class="hero__bg"></div>
     <div class="hero__content col max80 mx">
 
@@ -37,7 +37,7 @@
             </nav>
           </div>
         </aside>
-        <hr class="px1 sd-px2 div o20">
+        <hr class="px1 sd-px2 div o10">
         <div class="py1 sd-p1 sd-row ld-row justify-between flex-wrap">
           <div class="order0 row justify-between span1 span-auto">
             <figure><a class="block p1 fw800" href="{{ page('home').url }}">
@@ -58,6 +58,27 @@
               {% endfor %}
             </ul>
           </nav>
+        </div>
+      </div>
+      <div class="span1 col justify-center">
+        <div class="py1 sd-px1 row justify-around items-center">
+          <div class="span1 max32">
+            <h1 class="p1 h1 lh1 fw800">Donec Dictum Libero Tortor, a Consectetur</h1>
+            <h2 class="p1 h4 lh4 o80">Sollicitudin quam auctor, mattis purus,
+              suspendisse mattis sollicitudin eros, euismod ultricies lorem,
+              in eu lacinia erat maecenas efficitur</h2>
+          </div>
+          <div class="span1 max32">
+            <div class="p1">
+              <figure>
+                <img
+                  class="block"
+                  src="{{ page('home').file('undraw_quite_town_mg2q.svg').url }}"
+                  style="max-width: 100%; height: auto; margin: 0 auto;"
+                >
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
 

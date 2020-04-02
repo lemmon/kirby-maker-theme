@@ -11,9 +11,16 @@
   }
 }
 
+.hero,
+.hero__content {
+  min-height: 100vh;
+}
+
 .hero {
   position: relative;
-  min-height: 100vh;
+  /* Sailor Blue on Mint */
+  background-color: #adefd1;
+  color: #00203f;
 }
 
 .hero__bg {
