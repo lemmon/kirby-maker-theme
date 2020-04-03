@@ -15,35 +15,55 @@ tabs:
   settings:
     label: Settings
     icon: cog
-    sections:
+    columns:
 
-      fields:
-        type: fields
-        fields:
+      - width: 3/4
+        sections:
 
-          tagline:
-            label: Tagline
-            type: text
-            help: >
-              Tagline will be displayed in title tag next to your site name.
-              (e.g. {{ site.title }} - Your Custom Tagline)
-
-          social:
-            label: Social
-            type: structure
+          fields:
+            type: fields
             fields:
-              name:
-                label: Name
-                type: text
-              code:
-                label: Code
-                type: text
-                help: Font Awesome Unicode code.
-              url:
-                label: Url
-                type: url
 
-          footer:
-            label: Footer
-            type: textarea
-            buttons: false
+              tagline:
+                label: Tagline
+                type: text
+                help: >
+                  Tagline will be displayed in title tag next to your site name.
+                  (e.g. {{ site.title }} - Your Custom Tagline)
+
+              social:
+                label: Social
+                type: structure
+                fields:
+                  name:
+                    label: Name
+                    type: text
+                  code:
+                    label: Code
+                    type: text
+                    help: Font Awesome Unicode code.
+                  url:
+                    label: Url
+                    type: url
+
+              footer:
+                label: Footer
+                type: textarea
+                buttons: false
+
+      - width: 1/4
+        sections:
+
+          favicon:
+            type: files
+            template: favicon
+            empty: No favicon uploaded
+            max: 1
+            sortable: false
+            layout: cards
+            size: tiny
+            info: "{{ file.width }} x {{ file.height }} ({{ file.mime }})"
+            image:
+              ratio: 1/1
+              cover: true
+            width: 1/2
