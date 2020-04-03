@@ -1,0 +1,36 @@
+#menu-invoke {
+  position: absolute;
+  left: -9999px;
+  &:checked + * #menu {
+    display: block;
+  }
+}
+
+.header {
+  /* Sailor Blue on Mint */
+  background-color: #adefd1;
+  color: #00203f;
+}
+
+.hero,
+.hero__content {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero__bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+}

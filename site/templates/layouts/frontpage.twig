@@ -1,0 +1,15 @@
+{% extends layout() %}
+
+{% block header %}
+<div class="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__content col max80 mx">
+
+    <div>
+      {{ parent() }}
+    </div>
+    {% block hero none %}
+
+  </div>
+</div>
+{% endblock %}

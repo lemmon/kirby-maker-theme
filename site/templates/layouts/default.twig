@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="{{ kirby.url }}/static/master.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/brands.css">
 </head>
-<body>
+<body class="col">
+
+  <div class="-view"></div>
 
   <input type="checkbox" id="menu-invoke" autocomplete="off">
 
-  <header class="hero">
-    <div class="hero__bg"></div>
-    <div class="hero__content col max80 mx">
-
+  <header class="header">
+    {% block header %}
+    <div class="max80 mx">
       <aside class="sd-px1">
         <div class="py05">
           <nav class="px05 self-center md-row justify-between nowrap">
@@ -58,86 +59,12 @@
           </ul>
         </nav>
       </div>
-      <div class="span1 py2 md-py4 col justify-center">
-        <div class="py1 sd-px1 col ld-row justify-around items-center">
-          <div class="span1 max32 py1 md-py2">
-            <h1 class="p1 h1 lh1 fw800">Donec Dictum Libero Tortor, a Consectetur</h1>
-            <h2 class="p1 h4 lh4 o80">Sollicitudin quam auctor, mattis purus,
-              suspendisse mattis sollicitudin eros, euismod ultricies lorem,
-              in eu lacinia erat maecenas efficitur</h2>
-            <div class="row">
-              <div class="p1"><a class="button p1" href="#">
-                <span class="button__label px05 fw500 lh4 color-white uc">Explore further</span>
-              </a></div>
-            </div>
-          </div>
-          <div class="span1 max32 py1 md-py2">
-            <div class="p1">
-              <figure>
-                <img
-                  class="block"
-                  src="{{ page('home').file('undraw_quite_town_mg2q.svg').url }}"
-                  style="max-width: 100%; height: auto; margin: 0 auto;"
-                >
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr class="px1 sd-px2 div o10">
-      <aside class="py1 sd-p1">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));">
-          {% for i in 1..3 %}
-          <article class="px05 py075 row flex-wrap">
-            <div class="px05 py025">
-              <svg class="block" style="fill: none; opacity: .6" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-              </svg>
-            </div>
-            <div class="px025 span1" style="min-width: 18rem;">
-              <h1 class="h4 lh2 fw700"><a class="p025 inlineblock ul:hover" href="#">Hello!</a></h1>
-              <div class="p025 o80">
-                <p class="lh4">Quisque ut tempus magna. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-              </div>
-              <a class="anchor p025 inlineblock link--chevron fw500 lh4" href="#"><span class="ul:hover">Read more</span></a>
-            </div>
-          </article>
-          {% endfor %}
-        </div>
-      </aside>
-
     </div>
+    {% endblock %}
   </header>
 
-  <main class="wrap py2 md-py4">
-    <div class="py1 md-py2">
-      <div class="py1 sd-p1 md-grid2 ld-grid4">
-        {% for i in 1..4 %}
-        <article class="p075">
-          <figure class="p025">
-            <svg class="block bg-black-10" viewBox="0 0 4 3"></svg>
-          </figure>
-          <div class="p025">
-            <h1 class="h5 lh3 fw700">Hello World!</h1>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="py1 md-py2">
-      <div class="py1 sd-p1 ld-grid3">
-        {% for i in 1..3 %}
-        <article class="p075">
-          <figure class="p025">
-            <svg class="block bg-black-10" viewBox="0 0 8 5"></svg>
-          </figure>
-          <div class="p025">
-            <h1 class="h5 lh3 fw700">Hello World!</h1>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-    </div>
+  <main class="span1">
+    {% block main none %}
   </main>
 
   {% if site.footer.notEmpty %}

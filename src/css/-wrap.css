@@ -1,0 +1,19 @@
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 22rem;
+  @media (--view-sd) {
+    max-width: 24rem;
+  }
+  @media (--view-md) {
+    max-width: 46rem;
+  }
+  @media (--view-ld) {
+    max-width: 80rem;
+  }
+}
+
+@custom-media --view-sd (min-width: 24rem);
+@custom-media --view-md (min-width: 41rem);
+@custom-media --view-ld (min-width: 80rem);
+@custom-media --view-xl (min-width: 90rem);
