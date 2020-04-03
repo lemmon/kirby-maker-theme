@@ -1,5 +1,20 @@
-@import 'abrusco';
+@import 'abrusco/src/-reset';
+@import 'abrusco/src/-normalize';
+@import 'abrusco/src/-variables';
+
+@import '-button';
 @import '-copy';
+
+@import 'abrusco/src/-type';
+@import 'abrusco/src/-visibility';
+@import 'abrusco/src/-grid';
+@import 'abrusco/src/-spacing';
+@import 'abrusco/src/-border';
+@import 'abrusco/src/-color';
+@import 'abrusco/src/-background';
+@import 'abrusco/src/-cursor';
+
+@import 'abrusco/src/-debug';
 
 /* header */
 
@@ -73,3 +88,13 @@
 @custom-media --view-md (min-width: 41rem);
 @custom-media --view-ld (min-width: 80rem);
 @custom-media --view-xl (min-width: 90rem);
+
+/* components */
+
+.link--chevron {
+  &::after {
+    content: "\2192";
+    display: inline-block;
+    margin-left: .25em;
+  }
+}
