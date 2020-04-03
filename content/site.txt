@@ -1,22 +1,22 @@
-Title: Kriby Maker Theme
+Title: Maker Theme
 
 ----
 
-Tagline: Free Customizable Template
+Tagline: Free Customizable Kirby Template
+
 ----
 
 Social:
 
--
+- 
   name: GitHub
   code: f09b
-  url: >
-    https://github.com/lemmon/kirby-maker
--
+  url: https://github.com/lemmon/kirby-maker
+- 
   name: Twitter
   code: f099
   url: https://twitter.com/lemmon
 
 ----
 
-Footer: (c) (date: year) Built with (link: https://getkirby.com/ text: Kirby) and the (link: https://github.com/lemmon/kirby-maker text: Maker Theme) by (link: https://twitter.com/lemmon text: Lemmon Juice)
+Footer: (c) (date: year) Built with (link: https://github.com/lemmon/kirby-maker-theme text: Maker Theme) by (link: https://twitter.com/lemmon text: Lemmon Juice)
