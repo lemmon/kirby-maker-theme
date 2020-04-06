@@ -3714,6 +3714,10 @@ svg {
   max-width: 44rem;
 }
 
+.wmax {
+  max-width: 100%;
+}
+
 .x-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));

@@ -1,1 +1,62 @@
 Title: Home
+
+----
+
+Herotitle: Donec Dictum Libero Tortor, a Consectetur
+
+----
+
+Herotext: Sollicitudin quam auctor, mattis purus, suspendisse mattis sollicitudin eros, euismod ultricies lorem, in eu lacinia erat maecenas efficitur
+
+----
+
+Heroactions:
+
+- 
+  label: Explore further
+  link: about
+
+----
+
+Heroimage:
+
+- undraw_quite_town_mg2q.svg
+
+----
+
+Heroinfo:
+
+- 
+  title: Hello World
+  text: >
+    Quisque ut tempus magna. Interdum et
+    malesuada fames ac ante ipsum primis in
+    faucibus.
+  link: services
+  action: Read more
+  image:
+    - icon-folder.svg
+- 
+  title: Hello World
+  text: >
+    Quisque ut tempus magna. Interdum et
+    malesuada fames ac ante ipsum primis in
+    faucibus.
+  link: services
+  action: Read more
+  image:
+    - icon-folder.svg
+- 
+  title: Hello World
+  text: >
+    Quisque ut tempus magna. Interdum et
+    malesuada fames ac ante ipsum primis in
+    faucibus.
+  link: services
+  action: Read more
+  image:
+    - icon-folder.svg
+
+----
+
+Text: 
