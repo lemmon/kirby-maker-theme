@@ -1,24 +1,34 @@
 {% extends layout('subpage') %}
 
 {% block main %}
-<div class="wrap py2 md-py4">
+<section>
 
-  <section class="py1 md-py2">
+  <header>
+    <div class="max70 mx py1 md-py2 sd-px1">
 
-    {% if page.text.notEmpty %}
-    <div class="py1 sd-p1 max44 mx">
-      <div class="p025">
-        <div class="p075">
-          <h1 class="h2 lh2 fw800">{{ page.title }}</h1>
+      <h1 class="p1 h2 lh2 fw800">{{ page.title }}</h1>
+
+    </div>
+  </header>
+  <hr class="max80 mx px1 sd-px2 div o10">
+  <div class="wrap py2 md-py4">
+
+    <div class="py1 md-py2">
+
+      {% if page.text.notEmpty %}
+      <div class="py1 sd-p1 max44 mx">
+        <div class="p1">
+          <h1 class="h1 lh1 fw800">{{ page.title }}</h1>
         </div>
-        <div class="p075 copy lh4">
+        <div class="p1 copy lh4">
           {{ page.text | kt }}
         </div>
       </div>
+      {% endif %}
+
     </div>
-    {% endif %}
 
-  </section>
+  </div>
 
-</div>
+</section>
 {% endblock %}
